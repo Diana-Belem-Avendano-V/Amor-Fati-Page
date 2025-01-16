@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  header {
+      position: fixed;
+      top: 0;
+      max-height: 75px;
+      padding: 0px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      width: 100%;
+      z-index: 1000;
+  }
+  
+  #header-img {
+    width: auto;                
+    height: 75px;              
+  }
+  
+  #nav-bar {
+    display: flex;
+    gap: 45px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;  
+  }
+  
+  .nav-link:hover {
+    color: #7b716f;              
+  }
+  
+  body {
+    padding-top: 75px; /* Add padding to the top of the page, equal to or greater than the height of the fixed header */
+  }
+  
+  main {
+    margin: 10px 150px;
+  }
+  
+  section {
+    height: 100vh; /* Each section takes up the full viewport height */
+    position: relative;
+  }
+  
+  section::before {
+    content: "";
+    display: block;
+    height: 75px; /* Offset height to prevent content from being hidden behind the header */
+    margin-top: 15px; /* Pulls the section up */
+  }
+  
+  p, .vid-caption {
+    text-align: justify;
+  }
+  
+  #video-title {
+    padding: 75px 20px 0px 0px;
+  }
+  
+  #contact-us {
+    padding-top: 15px;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    body {
+      background-color: grey;
+    }
+  }
+  
+  
